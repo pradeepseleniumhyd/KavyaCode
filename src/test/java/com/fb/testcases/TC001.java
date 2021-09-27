@@ -11,8 +11,9 @@ import org.testng.annotations.Test;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 import utilities.BrowserCode;
+import utilities.Commons;
 
-public class TC001 {
+public class TC001 extends Commons {
 	
 	WebDriver driver;
 	BrowserCode bc = new BrowserCode();
@@ -37,7 +38,8 @@ public class TC001 {
 	{
 		driver.manage().window().maximize();
 		
-		driver.get("http://www.fb.com");
+		//driver.get("http://www.fb.com");
+		navigateURL(driver, "www.fb.com");
 	}
 	
 	
