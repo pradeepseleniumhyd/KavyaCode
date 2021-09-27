@@ -8,18 +8,18 @@
     </classes>
   </test> <!-- Test -->
   
-  <test thread-count="5" name="Edge Test">
+ <!--  <test thread-count="5" name="Edge Test">
   	<parameter name="browserName" value="edge"></parameter>
     <classes>
       <class name="com.fb.testcases.TC001"/>
     </classes>
-  </test> <!-- Test -->
+  </test> Test
   
   <test thread-count="5" name="IE Test">
   	<parameter name="browserName" value="ie"></parameter>
     <classes>
       <class name="com.fb.testcases.TC001"/>
     </classes>
-  </test> <!-- Test -->
+  </test> Test -->
   
 </suite> <!-- Suite -->

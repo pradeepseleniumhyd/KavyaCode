@@ -10,27 +10,26 @@ import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
+import utilities.BrowserCode;
 
 public class TC001 {
 	
 	WebDriver driver;
+	BrowserCode bc = new BrowserCode();
 	
 	@Parameters("browserName")
 	@BeforeMethod
 	public void browserCode(String browsername) throws Exception {
-		if(browsername.equalsIgnoreCase("chrome"))
-		{
-		 WebDriverManager.chromedriver().setup();
-		  driver = new ChromeDriver();
-		}else if(browsername.equalsIgnoreCase("edge"))
-		{
-			 WebDriverManager.edgedriver().setup();
-			  driver = new EdgeDriver();
-			}else
-			{
-				System.out.println(browsername + " is invalid");
-				throw new Exception(browsername + " is invalid");
-			}	 
+		/*
+		 * if(browsername.equalsIgnoreCase("chrome")) {
+		 * WebDriverManager.chromedriver().setup(); driver = new ChromeDriver(); }else
+		 * if(browsername.equalsIgnoreCase("edge")) {
+		 * WebDriverManager.edgedriver().setup(); driver = new EdgeDriver(); }else {
+		 * System.out.println(browsername + " is invalid"); throw new
+		 * Exception(browsername + " is invalid"); }
+		 */	 
+		driver=bc.browserOpen(driver, browsername);
+		
 	}
 	
 	@Test
